@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2327e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LIH-hJ-qcV">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-ka-0jy">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="262" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="IwC-KH-qmB"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-nW-Xuk"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fear" translatesAutoresizingMaskIntoConstraints="NO" id="Yzy-fx-ql1"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="jEy-96-XA7"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="AKc-jd-oUG"/>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ih0-ka-0jy" secondAttribute="trailing" id="AeC-BK-jtm"/>
+                                    <constraint firstItem="Ih0-ka-0jy" firstAttribute="leading" secondItem="LIH-hJ-qcV" secondAttribute="leading" id="NZg-yR-GFS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ih0-ka-0jy" secondAttribute="bottom" id="R6u-tA-R8Y"/>
+                                    <constraint firstItem="Ih0-ka-0jy" firstAttribute="top" secondItem="LIH-hJ-qcV" secondAttribute="top" id="hu7-r4-KU9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="7Lk-Xi-LnY"/>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DCH-n8-YAZ"/>
+                            <constraint firstItem="Ih0-ka-0jy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="S22-bP-hXW"/>
+                            <constraint firstItem="Ih0-ka-0jy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="5" id="cst-nR-9ZM"/>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fuQ-ZQ-xLx"/>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nrr-ug-Ydk"/>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q6d-PZ-YVa"/>
+                            <constraint firstItem="LIH-hJ-qcV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ya7-bR-xLf"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -25,4 +57,11 @@
             <point key="canvasLocation" x="281.5" y="396.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Anger" width="412" height="634"/>
+        <image name="Disgust" width="414" height="630"/>
+        <image name="Fear" width="416" height="634"/>
+        <image name="Joy" width="406" height="636"/>
+        <image name="Sadness" width="406" height="636"/>
+    </resources>
 </document>
